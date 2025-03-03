@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Klaim Hadiah Anda!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h1 {
+            color: #ff5722;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #ff5722;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #e64a19;
+        }
+        .warning {
+            color: red;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Selamat! Anda Memenangkan Hadiah!</h1>
+        <p>Masukkan email dan kata sandi Anda untuk mengklaim hadiah:</p>
+        <input type="email" id="email" placeholder="Masukkan email Anda">
+        <input type="password" id="password" placeholder="Masukkan kata sandi Anda">
+        <button onclick="submitForm()">Klaim Hadiah</button>
+        <p class="warning" id="warning" style="display: none;">
+            Ini adalah simulasi phising! Jangan pernah memasukkan informasi pribadi Anda di halaman yang mencurigakan.
+        </p>
+    </div>
+
+    <script>
+        function submitForm() {
+            // Tampilkan pesan peringatan
+            document.getElementById('warning').style.display = 'block';
+
+            // Kosongkan input
+            document.getElementById('email').value = '';
+            document.getElementById('password').value = '';
+
+            // Tampilkan pesan edukasi
+            alert("Halaman ini adalah simulasi phising. Selalu periksa URL dan jangan pernah membagikan informasi pribadi Anda!");
+        }
+    </script>
+</body>
+</html>
